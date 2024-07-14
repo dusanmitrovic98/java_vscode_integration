@@ -25,14 +25,3 @@ This repository contains a simple Java program using Java JDK 22 for compilation
     build.bat
     run.bat
     ```
-
-Folder Structure:
-
-├── .core
-│   ├── build.bat
-│   ├── clean.bat
-│   └── run.bat
-├── .vscode
-│   ├── tasks.json
-├── Main.java
-└── README.md
