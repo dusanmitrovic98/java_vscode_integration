@@ -1,0 +1,85 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Java Program",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "cls && .core\\build.bat"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Java Program",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "cd .core && run.bat"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build & Run Java Program",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "cd .core && run.bat"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": [],
+            "dependsOn": ["Build Java Program"]
+        },
+        {
+            "label": "Clean Program Created Files",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "cd .core && clean.bat"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}
